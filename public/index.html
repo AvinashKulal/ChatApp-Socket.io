@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Socket io -Chat</title>
+        
+    </head>
+    <body>
+
+        <center><h2>Socket Io Chat</h2></center>
+    <hr/>
+    <h2 id = "user-name" style="color:green"></h2>
+    
+    <div id="message-box" >
+        
+        <hr/>
+        <p style="color:red">Private Message</p>
+        <form name="form" id = "form">
+            UserName : <input type="text" size = "50" class="user-id"/>
+          
+            <button type="submit">contact</button>
+
+        </form>
+        <hr/>
+       
+
+        <form name="form" id = "form" hidden >
+            <p id="message"></p>
+            <button type="submit" id = "connect">connect</button>
+            <button type="submit" id = "disconnect">disConnect</button>
+        </form>
+
+    </div>
+&nbsp;
+    <div style="display: none;background-color: antiquewhite;" id = "chat-panel">
+        <p id="display-message"></p>
+        
+        <form name="form" id = "form">
+            <input type="text" size="50" id ="message" />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <hr/>
+    <p style="color:red" id="room-message-title"></p>
+    <button type="button" id  ="open-room-chat-btn">Open Room Chat</button><br/>
+    <div style="display:none; background-color: aquamarine;" id = "room-chat-panel">
+        
+        <p id="display-room-message"></p>
+        
+        <form name="form" id = "form">
+            <input type="text" size="50" id ="message" />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+    </body>
+</html>
